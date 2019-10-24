@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BackDoorActivity">
+
+    <com.heaven.easyframework.titlebar.widget.CommonTitleBar
+        android:id="@+id/backdoor_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:statusBarMode="light"
+        titlebar:centerText="标题栏"
+        titlebar:centerType="textView"
+        titlebar:centerTextColor="#ffffff"
+        titlebar:leftDrawable="@drawable/comm_titlebar_back_normal"
+        titlebar:leftDrawablePadding="10dp"
+        titlebar:leftType="imageButton"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/backdoor_recyclelistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backdoor_titlebar"
+        android:dividerHeight="1px"
+        android:overScrollMode="never"
+        />
+
+</RelativeLayout>

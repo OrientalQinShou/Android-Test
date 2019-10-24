@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/promotion_56"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:context=".model.FootBarModel">
+
+    <RelativeLayout
+        android:id="@+id/foot_custom_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/custom_home_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/foot_home_selector"
+            android:duplicateParentState="true" />
+
+        <TextView
+            android:id="@+id/custom_home_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:duplicateParentState="true"
+            android:maxLines="1"
+            android:text="@string/home_home"
+            android:textColor="@drawable/foot_text_color_selector"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foot_custom_classify"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/custom_classify_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/foot_classify_selector"
+            android:duplicateParentState="true" />
+
+        <TextView
+            android:id="@+id/custom_classify_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:duplicateParentState="true"
+            android:maxLines="1"
+            android:text="@string/home_classify"
+            android:textColor="@drawable/foot_text_color_selector"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foot_custom_shopcar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/custom_shopcar_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/foot_shopcar_selector"
+            android:duplicateParentState="true" />
+
+        <TextView
+            android:id="@+id/custom_shopcar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:duplicateParentState="true"
+            android:maxLines="1"
+            android:text="@string/home_shopcar"
+            android:textColor="@drawable/foot_text_color_selector"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/product_home_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/custom_shopcar_img"
+            android:layout_alignTop="@+id/custom_shopcar_img"
+            android:layout_marginRight="-5dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_shopcar_num"
+            android:gravity="center"
+            android:padding="1dp"
+            android:text=""
+            android:textColor="@color/color_ffffff"
+            android:textSize="12dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foot_custom_member"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/custom_member_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/foot_member_selector"
+            android:duplicateParentState="true" />
+
+        <TextView
+            android:id="@+id/custom_member_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:duplicateParentState="true"
+            android:maxLines="1"
+            android:text="@string/home_member"
+            android:textColor="@drawable/foot_text_color_selector"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
+
+    <com.heaven.easyframework.titlebar.widget.CommonTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:statusBarMode="light"
+        titlebar:centerText="通用标题栏"
+        titlebar:centerTextColor="#ffffff"
+        titlebar:bottomShadowHeight="0dp"
+        titlebar:showBottomLine="false"
+        titlebar:centerType="textView"
+        titlebar:rightType="textView"
+        titlebar:rightText="设置"
+        titlebar:rightTextColor="#ffffff"
+        android:visibility="visible"/>
 
 
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

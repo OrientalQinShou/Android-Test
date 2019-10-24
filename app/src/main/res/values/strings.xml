@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LAG</string>
+    <string name="home_home">1</string>
+    <string name="home_classify">2</string>
+    <string name="home_shopcar">3</string>
+    <string name="home_member">4</string>
+    <string name="click_exit_app">再按一次退出程序</string>
 </resources>

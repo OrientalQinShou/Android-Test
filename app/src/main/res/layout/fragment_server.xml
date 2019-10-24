@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_6dc7eb">
+    <com.heaven.easyframework.titlebar.widget.CommonTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/promotion_5"
+        titlebar:statusBarMode="light"
+        titlebar:centerText="通用标题栏"
+        titlebar:centerTextColor="#ffffff"
+        titlebar:bottomShadowHeight="0dp"
+        titlebar:showBottomLine="false"
+        titlebar:centerType="textView"
+        titlebar:rightType="textView"
+        titlebar:rightText="设置"
+        titlebar:rightTextColor="#ffffff"
+        android:visibility="visible"/>
+
+</RelativeLayout>
