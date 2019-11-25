@@ -4,20 +4,71 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def getVersionName2() {
+    if (rootProject.ext.isRelease) {
+        rootProject.ext.versionName + "(" + rootProject.ext.versionCode + ")"
+    } else {
+        rootProject.ext.versionName + "(test" + rootProject.ext.versionCode + ")"
+    }
+}
+
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "cn.lag.lag"
-        minSdkVersion 28
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName getVersionName2()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+//    signingConfigs {
+//        release {
+//            storeFile file(KEYSTORE_FILE)
+//            storePassword KEYSTORE_PASSWORD
+//            keyAlias KEY_ALIAS
+//            keyPassword KEY_PASSWORD
+//            v1SigningEnabled true
+//            v2SigningEnabled true
+//        }
+//        debug {
+//            storeFile file(KEYSTORE_FILE)
+//            storePassword KEYSTORE_PASSWORD
+//            keyAlias KEY_ALIAS
+//            keyPassword KEY_PASSWORD
+//            v1SigningEnabled true
+//            v2SigningEnabled true
+//        }
+//    }
+    /**
+     * zipAlignEnabled ：    Zipalign工具优化APK
+     * minifyEnabled ：      开启混淆，删除无用代码
+     * shrinkResources ：    删除无用资源
+     * <p>
+     * shrinkResources实际上并不会彻底删除无用资源，而是会保留文件名称，但没有内容，但是因为需要知道是否被引用，所以需要minifyEnabled配合使用
+     * 只有两者都为true的时候才会起到真正的删除无效代码和无效资源。
+     * </P>
+     * buildConfigField ：   是否显示Log日志
+     * proguardFiles ：      加载默认混淆配置文件
+     * signingConfig ：      签名
+     */
+
     buildTypes {
-        release {
-            minifyEnabled false
+        debug {
+            minifyEnabled true //混淆
+            zipAlignEnabled true //Zipalign优化 移除无用资源
+            shrinkResources true
+            buildConfigField "boolean", "LOG_DEBUG", "true"
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
         }
     }
 }

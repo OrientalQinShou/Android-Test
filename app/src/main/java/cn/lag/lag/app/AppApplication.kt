@@ -1,6 +1,8 @@
 package cn.lag.lag.app
 
 import android.app.Application
+import cn.lag.lag.BuildConfig
+import com.heaven.framework.log.LoggerConfig
 
 /**
  * 项目名称：Android-Test
@@ -23,5 +25,10 @@ open class AppApplication : Application() {
         fun get(): AppApplication {
             return instance!!
         }
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        LoggerConfig.setDEBUG(BuildConfig.LOG_DEBUG)
     }
 }
